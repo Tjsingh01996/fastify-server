@@ -14,6 +14,7 @@ fastify.register(cors, {
 
  
 fastify.register(require("./routes/products"));
+fastify.register(require("./routes/translations"));
 
 fastify.setErrorHandler((error, request, reply) => {
   fastify.log.error(error);
