@@ -9,6 +9,12 @@ const sequelize = new Sequelize(
     dialect: process.env.DB_DIALECT,
     underscored: true,
     logging: true, // Turn off SQL logging
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false, // Set to true if you have a trusted certificate
+      },
+    },
   }
 );
 

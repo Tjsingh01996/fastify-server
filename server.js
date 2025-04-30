@@ -7,11 +7,10 @@ const fastify = require("fastify")({
 const cors = require("@fastify/cors");
 const sequelize = require("./config/db");
 fastify.register(cors, {
-  origin: "http://localhost:3000",
+  origin: process.env.CLIENT,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   // credentials: true, // uncomment if you need cookies/headers
 });
-// fastify.register(require("@fastify/cors"), { origin: "http://localhost:3000" });
 
  
 fastify.register(require("./routes/products"));
@@ -28,7 +27,7 @@ const start = async () => {
   try {
     await sequelize.authenticate();
     console.log("Database connected...");
-    await fastify.listen({ port: 8000 });
+    await fastify.listen({ port: process.env.PORT });
     fastify.log.info(`Server listening on ${fastify.server.address().port}`);
     
   } catch (err) {

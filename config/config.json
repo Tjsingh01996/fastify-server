@@ -1,23 +1,35 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "root",
-    "database": "demo",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "username": "demo_9pvc_user",
+    "password": "W4sPLMU8EkPdsUdyPvvWmnrEVkdgC4Ba",
+    "database": "demo_9pvc",
+    "host": "dpg-d08sgjhr0fns73dom8s0-a.singapore-postgres.render.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   },
   "test": {
-    "username": "postgres",
-    "password": "root",
-    "database": "demo",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "username": "demo_9pvc_user",
+    "password": "W4sPLMU8EkPdsUdyPvvWmnrEVkdgC4Ba",
+    "database": "demo_9pvc",
+    "host": "dpg-d08sgjhr0fns73dom8s0-a.singapore-postgres.render.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   },
   "production": {
-    "username": "postgres",
-    "password": "root",
-    "database": "demo",
-    "host": "127.0.0.1",
+    "username": "demo_9pvc_user",
+    "password": "W4sPLMU8EkPdsUdyPvvWmnrEVkdgC4Ba",
+    "database": "demo_9pvc",
+    "host": "dpg-d08sgjhr0fns73dom8s0-a",
     "dialect": "postgres"
   }
 }

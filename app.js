@@ -1,3 +1,4 @@
+require("dotenv").config();
 const fastify = require("fastify")();
 const productRoutes = require("./routes/products");
 
