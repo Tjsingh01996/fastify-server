@@ -6,8 +6,11 @@ const fastify = require("fastify")({
 });
 const cors = require("@fastify/cors");
 const sequelize = require("./config/db");
+const origins = process.env.CLIENT ? process.env.CLIENT.split(",") : [];
+
+console.log(origins);
 fastify.register(cors, {
-  origin: process.env.CLIENT,
+  origin: origins,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   // credentials: true, // uncomment if you need cookies/headers
 });
