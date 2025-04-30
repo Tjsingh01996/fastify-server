@@ -27,7 +27,7 @@ const start = async () => {
   try {
     await sequelize.authenticate();
     console.log("Database connected...");
-    await fastify.listen({ port: process.env.PORT });
+    await fastify.listen({ port: process.env.PORT, host: process.env.HOST });
     fastify.log.info(`Server listening on ${fastify.server.address().port}`);
     
   } catch (err) {
