@@ -35,5 +35,7 @@
   "menu_language": "English",
   "menu_language_flag": "🇬🇧",
   "page_title": "Terms",
-  "button_close_back": "Close and Go Back"
+  "button_close_back": "Close and Go Back",
+  "english": "English",
+  "swedish": "Swedish"
 }
